@@ -23,7 +23,8 @@ body {
     width: 40vw;
     background-image: url(./aerial-view-mountain-covered-fog-beautiful-pink-sky.jpg);
     background-size: cover;
-    display: flex;
+    display: bl;
+    align-items: center;
 }
 
 .left-side > a {
@@ -67,3 +68,97 @@ body {
 
 
 /* Right side of the page */
+.right-side {
+    width: 60vw;
+    display: flex;
+    flex-flow: column nowrap;
+    /* font-family: 'Courier New', Courier, monospace; */
+    justify-content: center;
+    /* align-items: center; */
+    /* border-left: 2px rgb(0, 0, 0) solid; */
+}
+
+.preamble-text {
+    border: 1px black solid;
+    padding: 50px;
+}
+
+.preamble-text > h2, i {
+    position: relative;
+    top: 30%;
+    font-size: 2rem;
+}
+
+.form-contents {
+    border: 1px black solid;
+}
+
+.form-contents > h2 {
+    font-size: 2rem;
+}
+
+.form {
+    /* display: flex; */
+    /* flex-flow: row wrap; */
+    /* gap: 20px; */
+    display: flex;
+    flex-flow: row wrap;
+    gap: 20px;
+    /* padding-top: 20px; */
+    padding-bottom: 20px;
+}
+
+.form > div {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 45%;
+    border: 1px solid black;
+    /* display: flex;
+    flex-flow: column wrap;
+    width: 40%;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    opacity: 50%; */
+}
+
+
+/* .submit {
+    border: 1px black solid;
+    padding: 0px;
+} */
+
+button{
+    padding: 7px 10px 7px 10px;
+    width: 10%;
+    height: 50px;
+    background-color: rgb(213, 61, 19);
+    border: 1px solid transparent;
+    border-radius: 3px;
+    /* margin-left: 40px;*/
+}
+
+button:hover{
+  background-color: #f49f1f;
+  color: white;
+}
+
+button:focus{
+  outline: none;
+}
+
+button:active{
+  background-image: linear-gradient(#d31538, #582300);
+}
+
+input {
+    padding: 5px;
+    width: 40%;
+}
+
+input:valid {
+    border-color:green;
+}
+
+input:invalid {
+    border-color:red;
+}
