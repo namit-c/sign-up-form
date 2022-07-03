@@ -1,21 +1,16 @@
-@font-face {
-    font-family: logo-font;
-    src: url(./Franksthone-OV1oe.ttf);
-  }
-
 *{
     margin: 0px;
     padding: 0px;
-    font-size: 12px;
+    font-family: 'Source Sans Pro', sans-serif;
+    /* font-size: 100%; */
 }
 
 body {
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
     display: flex;
 }
 
-/* Left side of the page */
 
 .left-side {
     position: relative;
@@ -23,7 +18,6 @@ body {
     width: 40vw;
     background-image: url(./aerial-view-mountain-covered-fog-beautiful-pink-sky.jpg);
     background-size: cover;
-    display: bl;
     align-items: center;
 }
 
@@ -35,6 +29,7 @@ body {
     text-decoration: none;
     font-weight: bold;
     opacity: 50%;
+    font-size: 0.8rem;
 }
 
 .left-side > a:hover {
@@ -52,113 +47,232 @@ body {
     align-items: center;
 }
 
-.logo-overlay > p {
-    font-size: 8rem;
-    font-family: logo-font;
+.logo-overlay > h1 {
+    font-size: 3rem;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 .logo-overlay > img {
     padding: 15px;
-    width: 8rem;
-    height: 10rem;
+    width: 7rem;
+    height: 8rem;
 }
 
-/* ADD STYLE FOR MIN-WIDTH */
-/* MAKE THE FORMAT VERTICAL IN THAT CASE; INSTEAD OF SIDE BY SIDE */
 
-
-/* Right side of the page */
 .right-side {
     width: 60vw;
     display: flex;
-    flex-flow: column nowrap;
-    /* font-family: 'Courier New', Courier, monospace; */
+    flex-direction: column;
     justify-content: center;
-    /* align-items: center; */
-    /* border-left: 2px rgb(0, 0, 0) solid; */
 }
 
 .preamble-text {
-    border: 1px black solid;
-    padding: 50px;
+    padding: 0px 20px;
 }
 
-.preamble-text > h2, i {
-    position: relative;
-    top: 30%;
-    font-size: 2rem;
+.preamble-text > h2 {
+    font-size: 1.4rem;
 }
 
 .form-contents {
-    border: 1px black solid;
+    margin-top: 2rem;
 }
 
-.form-contents > h2 {
-    font-size: 2rem;
+#form-title {
+    font-size: 1.4rem;
+    width: 100%;
 }
 
-.form {
-    /* display: flex; */
-    /* flex-flow: row wrap; */
-    /* gap: 20px; */
+form {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.form-inputs {
+    border-top: 1px solid rgba(218, 218, 218, 0.65);
     display: flex;
     flex-flow: row wrap;
     gap: 20px;
-    /* padding-top: 20px; */
-    padding-bottom: 20px;
+    padding: 20px 20px 40px 20px;
+    background-color: #ededed;
+    box-shadow: 0px 5px 10px rgba(110, 110, 110, 0.40);
 }
 
-.form > div {
+.form-inputs > div {
     display: flex;
-    flex-flow: column nowrap;
-    width: 45%;
-    border: 1px solid black;
-    /* display: flex;
     flex-flow: column wrap;
-    width: 40%;
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    opacity: 50%; */
+    width: 45%;
 }
 
-
-/* .submit {
-    border: 1px black solid;
-    padding: 0px;
-} */
-
-button{
-    padding: 7px 10px 7px 10px;
-    width: 10%;
-    height: 50px;
-    background-color: rgb(213, 61, 19);
-    border: 1px solid transparent;
-    border-radius: 3px;
-    /* margin-left: 40px;*/
-}
-
-button:hover{
-  background-color: #f49f1f;
-  color: white;
-}
-
-button:focus{
-  outline: none;
-}
-
-button:active{
-  background-image: linear-gradient(#d31538, #582300);
+label {
+    padding-left: 0px;
+    margin-bottom: 5px;
 }
 
 input {
-    padding: 5px;
-    width: 40%;
+    padding: 10px 15px;
+    width: 90%;
+    border: 1px solid rgb(206, 206, 206);
+    border-radius: 40px;
+    font-size: 0.9rem;
 }
 
-input:valid {
-    border-color:green;
+input:invalid:focus {
+    border: 1px solid rgb(255, 69, 100);
+    outline: none;
 }
 
-input:invalid {
-    border-color:red;
+input:focus:valid {
+    border: rgb(45, 197, 11) 1px solid;
+    outline: none;
+}
+
+button{
+    margin: 40px 20px 20px 20px;
+    width: 15vw;
+    height: 40px;
+    background-color: #f65976;
+    color: white;
+    border: 1px solid #e32d37;
+    border-radius: 40px;
+    font-size: 0.8rem;
+}
+
+button:hover{
+    background-image: linear-gradient(#f07289, #af6d89);
+    background-color: #f49f1f;
+    color: white;
+}
+
+button:focus{
+    outline: none;
+}
+
+button:active{
+    border-color: white;
+}
+
+.after-submit {
+    margin-left: 20px;
+    font-size: 1rem;
+}
+
+.after-submit > p {
+    display: inline;
+}
+
+.after-submit > a {
+    display: inline;
+    color: #f65976;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.after-submit > a:hover {
+    color: #d21821;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 750px)  {
+    body {
+        height: auto;
+        width: 100vw;
+        flex-direction: column;
+    }
+
+    .left-side {
+        height: 20vh;
+        background-image: url(./aerial-view-mountain-covered-fog-beautiful-pink-sky.jpg);
+        width: 100vw;
+        background-position-y: 75%;
+        display: flex;
+    }
+
+    .logo-overlay {
+        position: absolute;
+        top: 0px;
+        display: flex;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .logo-overlay > h1 {
+        font-size: 2rem;
+        font-family: 'Source Sans Pro', sans-serif;
+    }
+    
+    .logo-overlay > img {
+        padding: 15px;
+        width: 3.5rem;
+        height: 4rem;
+    }
+
+    .left-side > a {
+        color: white;
+        position: absolute;
+        bottom: 5px;
+        right: 0px;
+        text-decoration: none;
+        font-weight: bold;
+        opacity: 50%;
+        font-size: 0.2rem;
+    }
+
+    .right-side {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .preamble-text {
+        padding: 30px 20px 0px 20px;
+    }
+    
+    .preamble-text > h2 {
+        font-size: 1.2rem;
+    }
+    
+    .form-contents {
+        margin-top: 1rem;
+    }
+
+    #form-title {
+        font-size: 1.2rem;
+        width: 100%;
+    }
+    
+    form {
+        display: flex;
+        flex-flow: column nowrap;
+    }
+    
+    .form-inputs {
+        border-top: 1px solid rgba(218, 218, 218, 0.65);
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 20px;
+        padding: 20px 20px 40px 20px;
+        background-color: #ededed;
+        box-shadow: 0px 5px 10px rgba(110, 110, 110, 0.40);
+    }
+    
+    .form-inputs > div {
+        display: flex;
+        flex-flow: column wrap;
+        width: 100%;
+    }
+    
+    label {
+        padding-left: 0px;
+        margin-bottom: 5px;
+    }
+
+    button{
+        width: 50vw;
+    }
+
+    .after-submit > a {
+        padding-bottom: 20px;
+    }
 }
